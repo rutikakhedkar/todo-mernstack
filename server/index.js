@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 // Middleware to parse JSON bodies
 app.use(express.json());
 app.use(cors({
-    origin: 'http://localhost:5173'
+    origin: 'https://todo-mernstack-ten.vercel.app/'
   }));
 app.use("/api/auth",router)
 
