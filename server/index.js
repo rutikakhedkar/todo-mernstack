@@ -12,6 +12,9 @@ app.use(cors({
     method:["POST", "GET"],
     credentials: true
   }));
+app.get("/",(req,res)=>{
+    res.send("Working");
+})
 app.use("/api/auth",router)
 
 
