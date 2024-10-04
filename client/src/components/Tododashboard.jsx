@@ -15,7 +15,7 @@ const Tododashboard = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/api/auth/addtasks', { taskName, labels });
+      const response = await axios.post('https://todo-mernstack-q3nk.vercel.app/api/auth/addtasks', { taskName, labels });
       console.log('Task added:', response.data);
       setShowModel(false);
       // Optionally fetch tasks again to update the task list
@@ -27,7 +27,7 @@ const Tododashboard = () => {
 
   const fetchTasks = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/api/auth/gettask');
+      const response = await axios.get('https://todo-mernstack-q3nk.vercel.app/api/auth/gettask');
       setTasksData(response.data.tasks);
     } catch (error) {
       console.error('Error fetching tasks:', error.response ? error.response.data : error.message);
